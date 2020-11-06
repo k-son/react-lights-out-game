@@ -112,12 +112,6 @@ class Board extends Component {
       }
 
       tblBoard.push(<tr>{row}</tr>);
-      /*
-      let tblRow = [];
-      tblRow = [...this.state.board[y]];
-      const cellRow = tblRow.map(cell => cell ? <Cell isLit="true" /> : <Cell isLit="false" />)
-      tblBoard.push(cellRow);
-      */
     }
 
 
