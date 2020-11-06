@@ -103,8 +103,8 @@ class Board extends Component {
 
     // make table board
     let tblBoard = [];
-    for (let y=0; y<this.props.numRows; y++) {
 
+    for (let y=0; y<this.props.numRows; y++) {
       let row = [];
 
       for (let x=0; x<this.props.numColumns; x++) {
