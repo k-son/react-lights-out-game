@@ -102,7 +102,7 @@ class Board extends Component {
     // TODO
 
     // make table board
-    let tableBoard = [];
+    let tblBoard = [];
     for (let y=0; y<this.props.numRows; y++) {
 
       let row = [];
@@ -111,8 +111,13 @@ class Board extends Component {
         row.push(<Cell isLit={this.state.board[y][x]} />);
       }
 
-      tableBoard.push(<tr>{row}</tr>);
-
+      tblBoard.push(<tr>{row}</tr>);
+      /*
+      let tblRow = [];
+      tblRow = [...this.state.board[y]];
+      const cellRow = tblRow.map(cell => cell ? <Cell isLit="true" /> : <Cell isLit="false" />)
+      tblBoard.push(cellRow);
+      */
     }
 
 
@@ -121,7 +126,7 @@ class Board extends Component {
         {this.state.hasWon ? 'You win!' : 
         <table className="Board">
           <tbody>
-            {tableBoard}
+            {tblBoard}
           </tbody>
         </table>
         }
