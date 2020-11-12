@@ -1,3 +1,83 @@
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
 .Board {
   margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #fff, -10px 0 45px #f0f, 10px 0 45px #0ff;
+}
+
+.Board tr:first-of-type td:first-of-type {
+  border-top-left-radius: 7px;
+}
+
+.Board tr:first-of-type td:last-of-type {
+  border-top-right-radius: 7px;
+}
+
+.Board tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 7px;
+}
+
+.Board tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 7px;
+}
+
+.Neon {
+  font-family: neon, cursive;
+  font-size: 6.4em;
+  line-height: 1;
+  margin: 16px auto 32px;
+}
+
+.Neon-orange {
+  color: #FB4264;
+  text-shadow: 0 0 3vw #F40A35;
+  -moz-animation: neon-orange 1s ease infinite;
+  -webkit-animation: neon-orange 1s ease infinite;
+  animation: neon-orange 1s ease infinite;
+}
+
+.Neon-blue {
+  color: #426DFB;
+  text-shadow: 0 0 3vw #2356FF;
+  -moz-animation: neon-blue 2s linear infinite;
+  -webkit-animation: neon-blue 2s linear infinite;
+  -o-animation: neon-blue 2s linear infinite;
+  animation: neon-blue 2s linear infinite;
+}
+
+@keyframes neon-orange {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+
+@keyframes neon-blue {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}
+
+.Win-msg {
+  position: fixed;
+  top: 20vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  font-family: neon, cursive;
+  font-size: 10vw;
 }
